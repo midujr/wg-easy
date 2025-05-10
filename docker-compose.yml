@@ -6,7 +6,7 @@ services:
     environment:
       # Change Language:
       # (Supports: en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi)
-      - LANG=de
+      - LANG=ru
       # ⚠️ Required:
       # Change this to your host's public address
       - WG_HOST=raspberrypi.local
@@ -34,7 +34,7 @@ services:
       - etc_wireguard:/etc/wireguard
     ports:
       - "51820:51820/udp"
-      - "80:51821/tcp"
+      - "51821:51821/tcp"
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
